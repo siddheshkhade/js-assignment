@@ -1,0 +1,42 @@
+
+//question 2) ---->
+//Using var, variables are function-scoped because their visibility is limited to the function. When you try to use it outside of the function, you’ll get an error.
+
+function nodeSimplified(){
+    var a =10;
+    console.log(a);  // output 10
+    if(true){
+     var a=20;
+     console.log(a); // output 20
+    }
+    console.log(a);  // output 20
+  }
+  
+  
+/*The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally initialize the variable.
+
+Example: let a =10;
+
+The let statement allows you to create a variable with the scope limited to the block on which it is used.*/
+
+function nodeSimplified(){
+    let a =10;
+    console.log(a);  // output 10
+    if(true){
+     let a=20;
+     console.log(a); // output 20
+    }
+    console.log(a);  // output 10
+  }
+
+  /*  const
+const statement values can be assigned once and they cannot be reassigned. The scope of const statement works similar to let statements.
+
+Example: const a =10;*/
+
+function nodeSimplified(){
+    const MY_VARIABLE =10;
+    console.log(MY_VARIABLE);  //output 10
+    MY_VARIABLE =20;           //throws type error
+    console.log(MY_VARIABLE); 
+  }
