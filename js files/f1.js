@@ -1,3 +1,4 @@
+//DAY 2 JAVASCRIPT ASSIGNMENT
 //Question 1:
 // Write a JS code which takes input from the user and logs it in the console.
 
