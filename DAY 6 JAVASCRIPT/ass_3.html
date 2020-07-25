@@ -1,0 +1,68 @@
+<!--q3) -> program for making webpage that will the name of user,then it'll display a welcome msg on web and also webpage 
+    should also have clock do it by using toogle method of the classList amd add dark mode to the website-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+    
+<script> 
+
+
+var customerName = prompt("Please enter your name", "");
+if (customerName!= null) {
+    document.getElementById("welcome").innerHTML =
+    "Hello " + customerName + s
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+</script>
+</head>
+
+
+<body>
+
+<div id="welcome">welcome.</div>
+<body onload="startTime()"></body><br>
+
+<h2>Toggle Dark/Light Mode</h2>
+<p>Click the button to toggle between dark and light mode for this page.</p>
+
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<div id="txt"></div>
+
+</body>
+</html>
